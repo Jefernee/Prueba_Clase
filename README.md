@@ -3,6 +3,7 @@
 Un juego interactivo desarrollado en **HTML5**, **CSS** y **JavaScript** que permite a los usuarios agregar nombres a una lista y realizar el sorteo para asignar amigos secretos de manera sencilla y visual.
 
 ---
+![Juegod de amigo secreto](https://github.com/Jefernee/Challenge-amigo-secreto/blob/main/Captura%20de%20pantalla%202025-01-22%20152228.png?raw=true)
 
 ## Índice
 
