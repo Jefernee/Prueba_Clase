@@ -1,162 +1,523 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* Variables globales */
 :root {
-    --color-primary: #4B69FD;
-    --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
-    --color-button: #fe652b;
-    --color-button-hover: #e55720;
-    --color-text: #444444;
-    --color-white: #FFFFFF;
+  --color-primario: #1d282f;
+  --color-secundario: #007bff;
+  --color-terciario: #11273e; /* centro de páginas, Color principal */
+  --color-Cuarterio: #111212; /* Navbar y footer */
+  --color-fondo: #f8f9fa;
+  --color-texto: #f6f7f9;
+  --color-texto-secundario: #0f1e2c;
+  --color-blanco: #ffffff;
+  --color-bordes: #dee2e6;
+
+ 
+}
+*{
+  margin: 0;
+  padding: 0;
 }
 
-/* Estilos generales */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* 🔹 Navbar */
+.custom__navbar {
+  background-color: var(--color-Cuarterio); /* Color de fondo Navvar */
+  padding: 1rem 0.5rem;
+  border-bottom: 3px solid #631717; /* Línea decorativa */
 }
 
-body {
-    height: 100vh;
-    background-color: var(--color-primary);
+/* Sección principal de página web*/
+.entrada-contenido {
+  background-color: var(--color-terciario);
+  height: 100vh; /* Esto asegura que ocupe toda la altura de la ventana */
+  display: flex;
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: center; /* Centra el contenido horizontalmente font-family: "Noto Serif", serif;*/
+}
+.texto__parrafo {
+  color: var(--color-blanco);
+  font-family: "Noto Serif", serif;
+  font-size: 1.2rem;
+}
+.custom__h1 {
+  color: var(--color-blanco);
+  font-family: "Noto Serif", serif;
+}
+
+.entrada__contenido__nombre__texto{
+  display: flex;
+  justify-content: center;
+}
+
+/* Imágenes adaptables pagina principal*/
+.imagen__principal {
+  width: 100%; /* La imagen abarca todo el ancho de su contenedor */
+  /* height: 100%; La imagen abarca toda la altura de su contenedor */
+  border-radius: 30px;
+}
+
+/* Sección javascript, transición Activación, se traen por id*/
+#imagen__Paginaprincipal, #titulo__Paginaprincipal, #parrafo__Paginaprincipal {
+  opacity: 0;  /* Elementos invisibles */
+  transform: translateY(10px);  /* Desplazados hacia abajo */
+}
+
+/*@media(max-width: 767px){
+
+}*/
+
+/* Media Queries para pantallas grandes (tabletas y pantallas grandes no de escritorio) */
+@media (min-width: 1201px) {
+  /* Para pantallas grandes (mayores a 1200px) */
+
+  .entrada-contenido {
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    padding: 60px; /* Espacio dentro del contenedor */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Centra todo el contenido horizontalmente */
+    align-items: center; /* Centra todo el contenido verticalmente */
+  }
+
+  .entrada__contenido__nombre__texto {
+    width: 60%; /* El contenido de texto ocupa un 60% del ancho */
+    text-align: center; /* Centra el texto */
+  }
+
+  .entrada__contenido__imagen {
+    width: 60%; /* Ajusta la imagen para que ocupe el 60% del ancho */
+    margin-top: 20px; /* Añade espacio encima de la imagen */
+  }
+
+  /* Ajuste de imágenes para pantallas grandes */
+  .imagen__principal {
+    border-radius: 30px; /* Aumenta el radio para bordes más redondeados */
+    width: 100%; /* La imagen sigue ocupando el 100% del ancho disponible */
+  }
+
+  .texto__parrafo {
+    font-size: 1.4rem; /* Aumenta el tamaño del texto para pantallas grandes */
+  }
+
+  .custom__h1 {
+    font-size: 3rem; /* Aumenta el tamaño del título para pantallas grandes */
+  }
 }
 
-.main-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
+/* 🔹 termina pagina principal */
+
+
+/* 🔹 Sección de Inicio */
+.seccion__inicio {
+  padding: var(--seccion__espaciado) 0;
+  background-color: var(--color-primario);
+  color: var(--color-texto);
+  text-align: center;
 }
 
-/* Banner */
-.header-banner {
-    flex: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 0 0;
+/* 🔹 Sección de Certificados */
+
+.seccion__proyectos {
+  background-color: var(
+    --color-terciario
+  ); /* Color de fondo (puedes cambiarlo) */
+  width: 100vw; /* Ocupar todo el ancho de la pantalla */
+  margin: 0;
+  padding: 50px 0;
+  min-height: auto; /* Mínimo 100% de la altura de la pantalla 50px 0 */
+  
+}
+.seccion__proyectos .row {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espacio entre tarjetas */
+}
+@media (min-width: 768px) {
+  .seccion__proyectos .row {
+    gap: 0; /* Quita el gap para que los 3 col-md-4 encajen perfectamente */
+  }
+}
+.seccion__proyectos-titulo {
+  text-align: center;
+  color: var(--color-texto); /* Color del texto */
+  font-size: 2rem; /* Tamaño de la letra */
+  margin-bottom: 30px;
+}
+.seccion__proyectos-card {
+  display: flex;
+  justify-content: center;
 }
 
-/* Sección de entrada */
-.input-section {
-    flex: 60%;
-    background-color: var(--color-secondary);
-    border: 1px solid #000;
-    border-radius: 64px 64px 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    width: 100%;
+.seccion__proyectos-card-content {
+  border: 1px solid var(--color-bordes);
+  transition: transform 0.3s ease;
+  width: 100%; /* Asegura que las tarjetas mantengan el tamaño adecuado */
+  max-width: 350px; /* Evita que se agranden demasiado */
 }
 
-/* Títulos */
-.main-title {
-    font-size: 48px;
-    font-family: "Merriweather", serif;
-    font-weight: 900;
-    font-style: italic;
-    color: var(--color-white);
+.seccion__proyectos-card-content:hover {
+  transform: scale(1.05);
 }
 
-.section-title {
-    font-family: "Inter", serif;
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--color-primary);
-    margin: 10px 0;
+.seccion-certificados {
+  background-color: var(--color-terciario); /* Fondo de la sección */
+  padding: 40px 20px; /* Espaciado para que no quede pegado */
+  display: flex;
+  justify-content: center; /* Centra el contenido si lo necesitas */
+  margin-bottom: 0; /* Elimina el margen inferior */
+}
+
+/* Mantiene el diseño bonito del select */
+.select__certificados {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff; /* Fondo blanco para el select */
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+}
+
+/* 🔹 Sección de Currículum */
+.seccion__curriculum {
+  padding: var(--seccion__espaciado) 0;
+  background-color: var(--color-terciario);
+  color: var(--color-texto);
+  text-align: center;
+}
+
+/* 🔹 Sección Sobre Mí */
+.seccion__sobre-mi {
+  padding: var(--seccion__espaciado) 0;
+  text-align: center;
+}
+
+/* 🔹 Sección de Contacto */
+.seccion__contacto {
+  padding: var(--seccion__espaciado) 0;
+  text-align: center;
+}
+/* Sección de Experiencia Profesional */
+.seccion__experiencia {
+  width: 100%;
+  margin: 0;
+  padding: 20px; /* Puedes ajustar el padding a tu gusto */
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: var(--color-terciario);
+}
+.seccion__experiencia-titulo {
+  text-align: center;
+  color: var(--color-blanco);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.seccion__experiencia-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.seccion__experiencia-item {
+  background: var(--color-blanco);
+  padding: 20px;
+  border-left: 5px solid var(--color-secundario); /* Línea azul al costado */
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.seccion__experiencia-cargo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--color-secundario);
+}
+
+.seccion__experiencia-fecha {
+  font-size: 0.9rem;
+  color: var(--color-texto-secundario);
+  margin-bottom: 10px;
+}
+
+.seccion__experiencia-descripcion {
+  font-size: 1rem;
+  color: var(--color-texto-secundario);
+}
+
+/* Ajustes para móviles */
+@media (max-width: 767px) {
+  .seccion__experiencia {
+    padding: 0 15px;
+  }
+}
+
+/* Sección sobre mi*/
+.titulo__resumen {
+  text-align: center;
+}
+
+/* Sección curriculum*/
+.seccion__curriculum {
+  width: 100%; /* anchura */
+  height: 100vh; /* altura */
+  background-color: var(--color-terciario); /* color de fondo desde el root */
+}
+/*footer*/
+/* Estilos generales del footer contacto y principal*/
+
+.footer__principal{
+  background-color: var(--color-Cuarterio); /* Fondo oscuro */
+  padding: 10px 0;
+}
+
+.contacto__informacion{
+  color: #f7fafc;
+  font-size: 14px;
+}
+
+/* Estilos de los iconos */
+.footer__social__ul{
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer__social__iniciador__li{
+  margin: 0 15px;
+}
+
+.footer__red__social__a{
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.footer__red__social__a:hover {
+  color: #3498db; /* Color azul al pasar el mouse */
+}
+
+.footer__nombre__social{
+  margin-right: 8px;
+}
+
+/* Lista de copyrigth*/
+
+.footer__boton{
+  background-color: #34495e;
+  padding: 10px 0;
+}
+
+.footer__boton__p{
+  margin: 0;
+  color: #bdc3c7;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .footer__principal .row {
     text-align: center;
-}
+  }
 
-/* Contenedores de entrada y botón */
-.input-wrapper {
-    display: flex;
+  .footer__principal .col-md-6 {
+    margin-bottom: 10px;
+  }
+
+  .footer__social__ul {
     justify-content: center;
-    width: 100%;
-    max-width: 600px;
-    margin-top: 20px;
+  }
+}
+/* Estilo general para el formulario de contacto */
+.form__contact {
+  max-width: 600px; /* Tamaño máximo del formulario */
+  margin: 20px auto; /* Centramos el formulario con un margen automático */
+  padding: 20px; /* Espacio interno en el formulario */
+  background-color: var(--color-primario); /* Color de fondo del formulario */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para el formulario */
+}
+.modificacion_color {
+  background-color: var(--color-terciario);
+}
+/* Estilo para los grupos dentro del formulario (cada campo) */
+.form__group {
+  margin-bottom: 20px; /* Espaciado entre los campos del formulario */
 }
 
-.input-name {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #000;
-    border-radius: 25px 0 0 25px;
-    font-size: 16px;
+/* Estilo para las etiquetas de los campos */
+.form__label {
+  font-size: 1.1rem; /* Tamaño de fuente ligeramente mayor */
+  font-weight: bold; /* Hacer las etiquetas en negrita */
+  margin-bottom: 5px; /* Espaciado debajo de las etiquetas */
+  display: block; /* Hacer que las etiquetas se muestren como bloques (una encima de la otra) */
+  color: var(--color-blanco); /* Color blanco para el texto */
 }
 
-.button-container {
-    width: 300px;
-    justify-content: center;
+/* Estilo para los grupos dentro del formulario (cada campo) */
+.form__group {
+  margin-bottom: 20px; /* Espaciado entre los campos del formulario */
 }
 
-/* Estilos de entrada de texto */
-.input-title {
-    flex: 1;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 2px solid #333;
-    border-right: none;
-    border-radius: 25px 0 0 25px;
-    font-family: "Merriweather", serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+/* Estilo para las etiquetas de los campos */
+.form__label {
+  font-size: 1.1rem; /* Tamaño de fuente ligeramente mayor */
+  font-weight: bold; /* Hacer las etiquetas en negrita */
+  margin-bottom: 5px; /* Espaciado debajo de las etiquetas */
+  display: block; /* Hacer que las etiquetas se muestren como bloques (una encima de la otra) */
+  color: var(--color-blanco); /* Color blanco para el texto */
 }
 
-/* Estilos de botón */
-button {
-    padding: 15px 30px;
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    border: 2px solid #000;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
+/* Estilo común para los campos de entrada (input y textarea) */
+.form__input,
+.form__textarea {
+  width: 100%; /* Hacer los campos de entrada del 100% del ancho del contenedor */
+  padding: 10px; /* Espaciado interno de los campos */
+  font-size: 1rem; /* Tamaño de fuente para el texto */
+  border: 1px solid #ccc; /* Borde de los campos */
+  border-radius: 4px; /* Bordes redondeados */
+  background-color: #fff; /* Color de fondo blanco para los campos */
+  transition: border-color 0.3s ease; /* Efecto de transición al enfocar el campo */
 }
 
-.button-add {
-    background-color: var(--color-tertiary);
-    color: var(--color-text);
-    border-radius: 0 25px 25px 0;
+/* Efecto de enfoque para los campos de entrada */
+.form__input:focus,
+.form__textarea:focus {
+  border-color: #007bff; /* Cambiar el color del borde cuando el campo está enfocado */
+  outline: none; /* Eliminar el borde por defecto del navegador */
 }
 
-.button-add:hover {
-    background-color: #a1a1a1;
+/* Estilo para el botón de envío */
+.form__btn {
+  background-color: #007bff; /* Fondo azul para el botón */
+  color: white; /* Texto blanco */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  font-size: 1.1rem; /* Tamaño de fuente del botón */
+  border: none; /* Sin borde por defecto */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiar el cursor a un puntero cuando se pasa sobre el botón */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
 }
 
-/* Listas */
-ul {
-    list-style-type: none;
-    color: var(--color-text);
-    font-family: "Inter", sans-serif;
-    font-size: 18px;
-    margin: 20px 0;
+/* Efecto cuando el botón se pasa sobre él */
+.form__btn:hover {
+  background-color: #0056b3; /* Cambiar el color de fondo cuando se pasa el mouse por encima */
 }
 
-.result-list {
-    margin-top: 15px;
-    color: #05DF05;
-    font-size: 22px;
-    font-weight: bold;
-    text-align: center;
+/* Media query para dispositivos pequeños (móviles) */
+@media (max-width: 767px) {
+  .form__contact {
+    padding: 15px; /* Reducir el espacio interno en dispositivos móviles */
+  }
+
+  .form__label {
+    font-size: 1rem; /* Reducir el tamaño de la fuente de las etiquetas */
+  }
+
+  .form__input,
+  .form__textarea {
+    font-size: 0.95rem; /* Reducir el tamaño de la fuente en los campos */
+  }
+
+  .form__btn {
+    font-size: 1rem; /* Reducir el tamaño de la fuente en el botón */
+  }
 }
 
-/* Botón de sortear título */
-.button-draw {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 10px 40px;
-    color: var(--color-white);
-    background-color: var(--color-button);
-    font-size: 16px;
+/* ------------------------------------------
+  Estilos para la Sección de Habilidades
+------------------------------------------ */
+
+/* Estilo general para la sección que contiene las habilidades */
+.habilidades_seccion {
+  background-color: var(--color-terciario); /* Fondo de la sección, usando una variable CSS para el color */
+  width: 100%; /* Hace que la sección ocupe todo el ancho de la pantalla */
+  min-height: 100vh; /* Asegura que la sección ocupe al menos la altura completa de la pantalla */
+  padding: 20px; /* Espacio dentro del contenedor para separar el contenido de los bordes */
+  text-align: center; /* Centra el texto dentro de la sección */
 }
 
-.button-draw img {
-    margin-right: 40px;
+/* ------------------------------------------
+  Contenedor de las cartas de habilidades
+------------------------------------------ */
+
+/* Organiza las cartas de habilidad usando un layout flexible */
+.habilidades_contenedor {
+  display: flex; /* Usamos Flexbox para un diseño flexible */
+  flex-wrap: wrap; /* Permite que las cartas se ajusten en filas cuando no hay suficiente espacio */
+  justify-content: center; /* Centra las cartas horizontalmente dentro del contenedor */
+  gap: 20px; /* Espacio de 20px entre cada carta */
 }
 
-.button-draw:hover {
-    background-color: var(--color-button-hover);
+/* ------------------------------------------
+  Estilos para cada carta de habilidad
+------------------------------------------ */
+
+/* Define cómo se ve cada carta de habilidad individual */
+.habilidad_carta {
+  background-color: #ffffff; /* Fondo blanco para la carta */
+  border-radius: 10px; /* Bordes redondeados para un diseño más suave */
+  padding: 20px; /* Espaciado interno para separar el contenido de los bordes */
+  width: 220px; /* Fija un ancho de 220px para cada carta */
+  text-align: center; /* Centra el contenido dentro de la carta */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+  transition: transform 0.3s ease-in-out; /* Añade una transición suave cuando la carta cambia */
 }
+
+/* Color del titulo */
+.label__habilidades{
+  color: var(--color-blanco);
+}
+/* Efecto visual cuando el usuario pasa el mouse sobre la carta */
+.habilidad_carta:hover {
+  transform: scale(1.05); /* La carta crece un 5% al pasar el ratón sobre ella */
+}
+
+/* ------------------------------------------
+  Estilos para los íconos dentro de las cartas
+------------------------------------------ */
+
+/* Ajusta el tamaño de las imágenes de los íconos dentro de las cartas */
+.habilidad_icono img {
+  width: 60px; /* Define el ancho de los iconos a 60px */
+  height: 60px; /* Define la altura de los iconos a 60px */
+}
+
+/* ------------------------------------------
+  Estilos para el título y la descripción
+------------------------------------------ */
+
+/* Define el estilo para el título de cada habilidad */
+.habilidad_titulo {
+  font-weight: bold; /* Hace que el texto del título sea negrita */
+  font-size: 18px; /* Tamaño de fuente de 18px para los títulos */
+  margin-top: 10px; /* Espacio superior entre el ícono y el título */
+}
+
+/* Define el estilo para la descripción de cada habilidad */
+.habilidad_descripcion {
+  font-size: 14px; /* Tamaño de fuente más pequeño para la descripción */
+  color: #666; /* Color gris claro para que la descripción sea legible pero no tan destacada */
+}
+
+/* ------------------------------------------
+  Estilos para pantallas pequeñas (Responsividad)
+------------------------------------------ */
+
+/* Cuando la pantalla tiene un máximo de 768px, se ajustan los estilos */
+@media (max-width: 768px) {
+  /* Modifica la disposición de las cartas cuando el ancho de la pantalla es pequeño */
+  .habilidades_contenedor {
+    flex-direction: column; /* Las cartas se apilan de arriba hacia abajo */
+    align-items: center; /* Centra las cartas verticalmente */
+  }
+
+  /* Ajusta el tamaño de las cartas para pantallas pequeñas */
+  .habilidad_carta {
+    width: 80%; /* Las cartas ocupan el 80% del ancho de la pantalla */
+  }
+}
+
+
+
+
+
+
+
