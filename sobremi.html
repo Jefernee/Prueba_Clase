@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <title>Sobre mí</title>
+  </head>
+  <body>
+    <main>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark custom__navbar">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Mi Portafolio</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto justify-content-center w-100">
+              <li class="nav-item">
+                <a class="nav-link" href="sobremi.html">Sobre Mí</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="proyectos.html">Proyectos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="curriculum.html">Currículum</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="experiencia.html">Experiencia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="habilidades.html">Habilidades</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="certificados.html">Certificados</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="titulo__resumen">Resumen Profesional</h5>
+          <p class="card-text">
+            Juan Pérez es un desarrollador de software con más de cinco años de
+            experiencia en el mundo de la tecnología. Desde temprana edad,
+            mostró un gran interés por la informática, lo que lo llevó a
+            especializarse en el desarrollo web y la arquitectura de software.
+            Su enfoque se basa en la creación de aplicaciones eficientes y
+            escalables, utilizando tecnologías modernas y buenas prácticas de
+            desarrollo. A lo largo de su carrera, Juan ha trabajado en diversas
+            empresas tecnológicas, participando en proyectos que van desde
+            plataformas de comercio electrónico hasta sistemas de gestión
+            empresarial. Domina lenguajes como JavaScript, Python y Java, además
+            de frameworks como React y Spring Boot. Su capacidad para adaptarse
+            a nuevas tecnologías y resolver problemas complejos lo ha convertido
+            en un profesional altamente valorado en su campo. Además del
+            desarrollo de software, Juan tiene un fuerte interés en la
+            ciberseguridad y la optimización de bases de datos, lo que le
+            permite garantizar que sus aplicaciones sean no solo funcionales,
+            sino también seguras y eficientes. Su filosofía de trabajo se basa
+            en la mejora continua, el aprendizaje constante y la colaboración en
+            equipos multidisciplinarios. En su tiempo libre, Juan disfruta
+            compartir su conocimiento con la comunidad, ya sea a través de
+            blogs, charlas o mentorías. Para él, la tecnología es una
+            herramienta poderosa que puede transformar el mundo, y su objetivo
+            es seguir contribuyendo a su evolución con soluciones innovadoras y
+            accesibles para todos.
+          </p>
+          <p class="card-text">
+            <small class="text-body-secondary">¡Es un placer compartir contigo mi recorrido profesional!</small>
+          </p>
+        </div>
+        <img
+          src="assets/imagen-sobremi.png"
+          class="card-img-bottom"
+          alt="imagen descriptiva ya sea sobre la persona o cualquier imagen"
+        />
+      </div>
+      
+      <footer class="footer__principal">
+        <div class="container">
+          <!-- Contenedor para el contenido del pie de página -->
+      
+          <div class="row">
+            <!-- "row" crea una fila flexible en Bootstrap que organiza los elementos en horizontal -->
+      
+            <!-- Sección de contacto -->
+            <div class="col-md-6">
+              <!-- "col-md-6" indica que en pantallas medianas (md) y mayores, esta columna ocupará 6 de las 12 columnas disponibles -->
+      
+              <p class="contacto__informacion">
+                <!-- Párrafo con la clase "contacto__informacion" que contiene el correo y el teléfono -->
+      
+                Correo:
+                <a href="mailto:tuemail@dominio.com">tuemail@dominio.com</a> |
+                <!-- Enlace de correo que abrirá el cliente de correo predeterminado al hacer clic -->
+                Teléfono: +123 456 789
+                <!-- Teléfono de contacto -->
+              </p>
+            </div>
+      
+            <!-- Sección de Redes Sociales -->
+            <div class="col-md-6">
+              <!-- Otra columna que ocupa 6 de las 12 columnas en pantallas medianas y mayores -->
+      
+              <ul class="footer__social__ul">
+                <!-- Lista no ordenada para los enlaces de redes sociales -->
+      
+                <li class="footer__social__iniciador__li">
+                  <!-- Elemento de lista para un enlace de red social -->
+                  <a class="footer__red__social__a"
+                    href="https://www.linkedin.com/in/tu-perfil/"
+                    target="_blank"
+                  >
+                   <!-- sin target="_blank" esta linea no abre una nueva pestaña -->
+                    <i class="footer__nombre__social"></i> LinkedIn
+                    <!-- Enlace a LinkedIn con un ícono opcional y texto -->
+                  </a>
+                </li>
+      
+                <li class="footer__social__iniciador__li">
+                  <!-- Elemento de lista para el enlace de GitHub -->
+                  <a class="footer__red__social__a" href="https://github.com/tu-perfil" target="_blank">
+                    <i class="footer__nombre__social"></i> GitHub
+                    <!-- Enlace a GitHub con un ícono opcional y texto -->
+                  </a>
+                </li>
+      
+                <li class="footer__social__iniciador__li">
+                  <!-- Elemento de lista para el enlace de Twitter -->
+                  <a class="footer__red__social__a" href="https://twitter.com/tu-perfil" target="_blank">
+                    <i class="footer__nombre__social"></i> Twitter
+                    <!-- Enlace a Twitter con un ícono opcional y texto -->
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Pie de página -->
+        <div class="footer__boton text-center">
+          <!-- "footer__boton" contiene el texto centrado con la clase "text-center" de Bootstrap -->
+          <p class="footer__boton__p">
+            &copy; 2025 Mi Portafolio. Todos los derechos reservados.
+            <!-- Texto con el símbolo de copyright y derechos reservados -->
+          </p>
+        </div>
+      </footer>
+      
+    </main>
+  </body>
+</html>
