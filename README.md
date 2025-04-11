@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Juego de Amigo Secreto
 
 Un juego interactivo desarrollado en **HTML5**, **CSS** y **JavaScript** que permite a los usuarios agregar nombres a una lista y realizar el sorteo para asignar amigos secretos de manera sencilla y visual.
@@ -111,3 +112,6 @@ bash
 
 
 ---
+=======
+# PracticaClase
+>>>>>>> 0cb6724489bbc1063a74651322402f24a94e59df
