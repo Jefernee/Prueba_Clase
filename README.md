@@ -113,5 +113,10 @@ bash
 
 ---
 =======
+<<<<<<< HEAD
 # PracticaClase
 >>>>>>> 0cb6724489bbc1063a74651322402f24a94e59df
+=======
+# Prueba_Clase
+>>>>>>> 984c4589ee89bb38a275e48058b9e8404a542250
+>>>>>>> 35a7571dbf9ba88ad3a4d2e09ac8ee8b973c8c08
