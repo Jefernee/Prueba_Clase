@@ -12,8 +12,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
     <title>Curriculum</title>
   </head>
-  <body>
-    <main>
+  <body class="body-curriculum">
+    <header>
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark custom__navbar">
         <div class="container">
@@ -56,77 +56,81 @@
           </div>
         </div>
       </nav>
+    </header>
+    <main class="main-curriculum bg-terciario">
+      <!-- Clase adicional para mayor especificidad -->
+      <div class="seccion__curriculum py-5">
+        <div class="container">
+          <div class="row g-4 justify-content-center">
+            <!-- Centrado y espacio entre tarjetas -->
 
-      <div class="seccion__curriculum">
-        <div class="row">
-          <!-- Primera Tarjeta -->
-          <div class="col-md-6">
-            <div class="card mb-3" style="max-width: 900px">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img
-                    src="assets/curriculum.png"
-                    class="img-fluid rounded-start"
-                    alt="..."
-                  />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Curriculum</h5>
-                    <p class="card-text">
-                      Puedes descargar el curriculum en este apartado.
-                    </p>
-                    <p class="card-text">
-                      <a
-                        href="assets/Guía de instalación - Mysql y Mysql Workbench (Windows).docx.pdf"
-                        target="_blank"
-                        class="btn btn-primary"
-                      >
-                        Descargar Curriculum
-                      </a>
-                    </p>
-                    <p class="card-text">
-                      <small class="text-body-secondary"
-                        >Ultima vez modificado 13/2/23</small
-                      >
-                    </p>
+            <!-- Tarjeta 1 (Curriculum) - Estructura original -->
+            <div class="col-md-6">
+              <div class="card mb-3" style="max-width: 900px">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="assets/imagenCurriculum.png"
+                      class="img-fluid rounded-start"
+                      alt="Curriculum"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Curriculum</h5>
+                      <p class="card-text">
+                        Puedes visualizar el curriculum en este apartado.
+                      </p>
+                      <p class="card-text">
+                        <a
+                          href="assets/jefernee.pdf"
+                          target="_blank"
+                          class="btn btn-primary"
+                          >Ver Curriculum</a
+                        >
+                      </p>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >Última vez modificado 26/04/2025</small
+                        >
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- Segunda Tarjeta -->
-          <div class="col-md-6">
-            <div class="card mb-3" style="max-width: 900px">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img
-                    src="assets/titulos.png"
-                    class="img-fluid rounded-start h-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Titulos</h5>
-                    <p class="card-text">
-                      Puedes descargar los titulos en este apartado.
-                    </p>
-                    <p class="card-text">
-                      <a
-                        href="assets/Guía de instalación - Mysql y Mysql Workbench (Windows).docx.pdf"
-                        target="_blank"
-                        class="btn btn-primary"
-                      >
-                        Descargar Titulos
-                      </a>
-                    </p>
-                    <p class="card-text">
-                      <small class="text-body-secondary"
-                        >Ultima vez modificado 13/2/23</small
-                      >
-                    </p>
+            <!-- Tarjeta 2 (Certificados) - Estructura original -->
+            <div class="col-md-6">
+              <div class="card mb-3" style="max-width: 900px">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="assets/titulos.png"
+                      class="img-fluid rounded-start h-100"
+                      alt="Certificados"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Títulos y Certificados</h5>
+                      <p class="card-text">
+                        Puedes visualizar los títulos en este apartado.
+                      </p>
+                      <p class="card-text">
+                        <a
+                          href="assets/Titulos_Jefernee.pdf"
+                          target="_blank"
+                          class="btn btn-primary"
+                          >Ver Títulos y Certificados</a
+                        >
+                      </p>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >Última vez modificado 26/04/25</small
+                        >
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -134,78 +138,86 @@
           </div>
         </div>
       </div>
-      
-      <footer class="footer__principal">
-        <div class="container">
-          <!-- Contenedor para el contenido del pie de página -->
-      
-          <div class="row">
-            <!-- "row" crea una fila flexible en Bootstrap que organiza los elementos en horizontal -->
-      
-            <!-- Sección de contacto -->
-            <div class="col-md-6">
-              <!-- "col-md-6" indica que en pantallas medianas (md) y mayores, esta columna ocupará 6 de las 12 columnas disponibles -->
-      
-              <p class="contacto__informacion">
-                <!-- Párrafo con la clase "contacto__informacion" que contiene el correo y el teléfono -->
-      
-                Correo:
-                <a href="mailto:tuemail@dominio.com">tuemail@dominio.com</a> |
-                <!-- Enlace de correo que abrirá el cliente de correo predeterminado al hacer clic -->
-                Teléfono: +123 456 789
-                <!-- Teléfono de contacto -->
-              </p>
-            </div>
-      
-            <!-- Sección de Redes Sociales -->
-            <div class="col-md-6">
-              <!-- Otra columna que ocupa 6 de las 12 columnas en pantallas medianas y mayores -->
-      
-              <ul class="footer__social__ul">
-                <!-- Lista no ordenada para los enlaces de redes sociales -->
-      
-                <li class="footer__social__iniciador__li">
-                  <!-- Elemento de lista para un enlace de red social -->
-                  <a class="footer__red__social__a"
-                    href="https://www.linkedin.com/in/tu-perfil/"
-                    target="_blank"
-                  >
-                   <!-- sin target="_blank" esta linea no abre una nueva pestaña -->
-                    <i class="footer__nombre__social"></i> LinkedIn
-                    <!-- Enlace a LinkedIn con un ícono opcional y texto -->
-                  </a>
-                </li>
-      
-                <li class="footer__social__iniciador__li">
-                  <!-- Elemento de lista para el enlace de GitHub -->
-                  <a class="footer__red__social__a" href="https://github.com/tu-perfil" target="_blank">
-                    <i class="footer__nombre__social"></i> GitHub
-                    <!-- Enlace a GitHub con un ícono opcional y texto -->
-                  </a>
-                </li>
-      
-                <li class="footer__social__iniciador__li">
-                  <!-- Elemento de lista para el enlace de Twitter -->
-                  <a class="footer__red__social__a" href="https://twitter.com/tu-perfil" target="_blank">
-                    <i class="footer__nombre__social"></i> Twitter
-                    <!-- Enlace a Twitter con un ícono opcional y texto -->
-                  </a>
-                </li>
-              </ul>
-            </div>
+    </main>
+
+    <footer class="footer__principal">
+      <div class="container">
+        <!-- Contenedor para el contenido del pie de página -->
+
+        <div class="row">
+          <!-- "row" crea una fila flexible en Bootstrap que organiza los elementos en horizontal -->
+
+          <!-- Sección de contacto -->
+          <div class="col-md-6">
+            <!-- "col-md-6" indica que en pantallas medianas (md) y mayores, esta columna ocupará 6 de las 12 columnas disponibles -->
+
+            <p class="contacto__informacion">
+              <!-- Párrafo con la clase "contacto__informacion" que contiene el correo y el teléfono -->
+
+              Correo:
+              <a href="mailto:jefernee50@gmail.com">jefernee50@gmail.com</a> |
+              <!-- Enlace de correo que abrirá el cliente de correo predeterminado al hacer clic -->
+              Teléfono: 506 86825481
+              <!-- Teléfono de contacto -->
+            </p>
+          </div>
+
+          <!-- Sección de Redes Sociales -->
+          <div class="col-md-6">
+            <!-- Otra columna que ocupa 6 de las 12 columnas en pantallas medianas y mayores -->
+
+            <ul class="footer__social__ul">
+              <!-- Lista no ordenada para los enlaces de redes sociales -->
+
+              <li class="footer__social__iniciador__li">
+                <!-- Elemento de lista para un enlace de red social -->
+                <a
+                  class="footer__red__social__a"
+                  href="https://www.linkedin.com/in/jefernee-ruiz-garcia"
+                  target="_blank"
+                >
+                  <!-- sin target="_blank" esta linea no abre una nueva pestaña -->
+                  <i class="footer__nombre__social"></i> LinkedIn
+                  <!-- Enlace a LinkedIn con un ícono opcional y texto -->
+                </a>
+              </li>
+
+              <li class="footer__social__iniciador__li">
+                <!-- Elemento de lista para el enlace de GitHub -->
+                <a
+                  class="footer__red__social__a"
+                  href="https://github.com/Jefernee"
+                  target="_blank"
+                >
+                  <i class="footer__nombre__social"></i> GitHub
+                  <!-- Enlace a GitHub con un ícono opcional y texto -->
+                </a>
+              </li>
+
+              <li class="footer__social__iniciador__li">
+                <!-- Elemento de lista para el enlace de Twitter -->
+                <a
+                  class="footer__red__social__a"
+                  href="https://www.instagram.com/jefernee/"
+                  target="_blank"
+                >
+                  <i class="footer__nombre__social"></i> Instagram
+                  <!-- Enlace a Twitter con un ícono opcional y texto -->
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-      
-        <!-- Pie de página -->
-        <div class="footer__boton text-center">
-          <!-- "footer__boton" contiene el texto centrado con la clase "text-center" de Bootstrap -->
-          <p class="footer__boton__p">
-            &copy; 2025 Mi Portafolio. Todos los derechos reservados.
-            <!-- Texto con el símbolo de copyright y derechos reservados -->
-          </p>
-        </div>
-      </footer>
-      
-    </main>
+      </div>
+
+      <!-- Pie de página -->
+      <div class="footer__boton text-center">
+        <!-- "footer__boton" contiene el texto centrado con la clase "text-center" de Bootstrap -->
+        <p class="footer__boton__p">
+          &copy; 2025 Mi Portafolio. Todos los derechos reservados.
+          <!-- Texto con el símbolo de copyright y derechos reservados -->
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

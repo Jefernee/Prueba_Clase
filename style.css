@@ -255,12 +255,30 @@
   text-align: center;
 }
 
-/* Sección curriculum*/
-.seccion__curriculum {
-  width: 100%; /* anchura */
-  height: 100vh; /* altura */
-  background-color: var(--color-terciario); /* color de fondo desde el root */
+
+
+
+
+/* Fondo terciario en toda la pantalla SIN afectar el footer */
+.body-curriculum {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ocupa toda la altura */
+  margin: 0;
+  background-color: var(--color-terciario); /* Color deseado */
 }
+
+/* Contenedor principal (crece para empujar el footer hacia abajo) */
+.main-curriculum {
+  flex: 1; /* Ocupa todo el espacio disponible */
+  padding-top: 2rem; /* Espacio interno opcional */
+}
+
+/* Tarjetas (se mantienen igual) */
+.seccion__curriculum .card {
+  background-color: white !important; /* Fuerza fondo blanco */
+}
+
 /*footer*/
 /* Estilos generales del footer contacto y principal*/
 
